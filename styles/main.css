@@ -9,3 +9,7 @@ body {
   body .brand {
     height: 50px;
     margin-top: 0; }
+  body .btn-warning {
+    background-color: orange; }
+  body .btn-success {
+    background-color: green; }
