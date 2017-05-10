@@ -5,18 +5,29 @@
 	<link rel="stylesheet" type="text/css" href="/lib/bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="/styles/main.css">
 </head>
-<body>
-	<nav class="navbar navbar-inverse">
+<div class="header"></div>
+<body ng-app="TodoApp">
+	<nav class="navbar navbar-inverse" ng-controller="NavCtrl">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
-        <img alt="Brand" src="...">
+        <img class="brand" alt="Brand" src="...">
       </a>
     </div>
-  </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    	<ul class="nav navbar-nav navbar-right" ng-repeat="thingy in navItems">
+    	    <li><a href="#">{{thingy.name}}</a></li>
+    	</ul>
+    </div> <!-- /.navbar-collapse -->
+  </div>	<!-- /.container-fluid -->
 </nav>
+<div ng-controller="ItemCtrl">
+	{{dog}}
+	{{37+12}}
+</div>
 <script src="/lib/bower_components/jquery/dist/jquery.js"></script>
 <script src="/lib/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/lib/bower_components/angular/angular.min.js"></script>
 <script src="/javascripts/main.js"></script>
 </body>
 </html>
