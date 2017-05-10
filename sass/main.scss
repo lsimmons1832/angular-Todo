@@ -4,8 +4,16 @@ body{
 	background-color: $aqua;
 
 	.header{
-		height: 200px;
-		background-color: $Fuchsia;
+		height: 250px;
+		background-color: $white;
+		background-image: url('/images/BRAND.PNG');
+		background-repeat: no-repeat;
+		background-position: 725px 0px;
+	}
+
+	.brand{
+		height: 50px;
+		margin-top: 0;
 	}
 }
 

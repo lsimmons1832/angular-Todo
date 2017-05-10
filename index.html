@@ -11,7 +11,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
-        <img class="brand" alt="Brand" src="...">
+        <img class="brand" alt="Brand" src="/images/brandlogo.png">
       </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -21,10 +21,28 @@
     </div> <!-- /.navbar-collapse -->
   </div>	<!-- /.container-fluid -->
 </nav>
+
 <div ng-controller="ItemCtrl">
-	{{dog}}
-	{{37+12}}
+	<div class="row">
+		<div class="col-xs-6 col-xs-offset-3">
+			<button class="col-xs-6 btn btn-success" ng-click="newItem()">New Item</button>
+			<button class="col-xs-6 btn btn-warning" ng-click="allItems()">All Item</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-8 col-xs-offset-2">
+			<h1>NG Todo</h1>
+			<div ng-show="!showListView">
+				<h3>New Todo</h3>
+			</div>
+			<div ng-show="showListView">
+				<h3>Todo List</h3>
+			</div>
+		</div>
+	 </div>
 </div>
+
+
 <script src="/lib/bower_components/jquery/dist/jquery.js"></script>
 <script src="/lib/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="/lib/bower_components/angular/angular.min.js"></script>

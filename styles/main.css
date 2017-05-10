@@ -1,5 +1,11 @@
 body {
   background-color: #7FDBFF; }
   body .header {
-    height: 200px;
-    background-color: #F012BE; }
+    height: 250px;
+    background-color: white;
+    background-image: url("/images/BRAND.PNG");
+    background-repeat: no-repeat;
+    background-position: 725px 0px; }
+  body .brand {
+    height: 50px;
+    margin-top: 0; }
