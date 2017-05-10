@@ -3,6 +3,7 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="/lib/bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="/styles/main.css">
 </head>
 <div class="header"></div>
@@ -11,7 +12,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
-        <img class="brand" alt="Brand" src="/images/brandlogo.png">
+        <img class="brand" alt="Brand" src="...">
       </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -36,7 +37,33 @@
 				<h3>New Todo</h3>
 			</div>
 			<div ng-show="showListView">
-				<h3>Todo List</h3>
+				<h3>Todo</h3>
+        <div ng-repeat="item in items | filter:{isCompleted:false}">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-xs-1">
+                    <input type="checkbox" name="" ng-checked="item.isCompleted"/>
+                    </div>
+                    <div class="col-xs-7">{{item.task}}</div>
+                    <div class="col-xs-1 col-xs-offset-2">{{item.assignedTo}}</div>            
+                <div class="col-xs-1">
+                    <button class="btn btn-danger fa fa-trash-o"></button></div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Completed</h3>
+        <div ng-repeat="item in items | filter:{isCompleted:true}">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-xs-1">
+                    <input type="checkbox" name="" ng-checked="item.isCompleted"/></div>
+                    <div class="col-xs-7">{{item.task}}</div>
+                    <div class="col-xs-1  col-xs-offset-2">{{item.assignedTo}}</div>            
+                    <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o"></button></div>
+                </div>
+            </div>
+        </div>
 			</div>
 		</div>
 	 </div>
