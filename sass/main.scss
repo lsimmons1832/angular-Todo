@@ -1,0 +1,27 @@
+@import 'colors';
+
+body{
+	background-color: $aqua;
+
+	.header{
+		height: 250px;
+		background-color: $black;
+		background-image: url('/images/BRAND.PNG');
+		background-repeat: no-repeat;
+		background-position: 725px 0px;
+	}
+
+	.brand{
+		height: 50px;
+		margin-top: 0;
+	}
+
+	.btn-warning{
+		background-color: orange;
+	}
+
+	.btn-success{
+		background-color: green;
+	}
+}
+
