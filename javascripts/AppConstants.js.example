@@ -5,4 +5,4 @@ app.constant("FIREBASE_CONFIG", {
   projectId: "",
   storageBucket: "",
   messagingSenderId: ""
-})
+});
