@@ -1,6 +1,8 @@
 app.controller("ItemListCtrl", function ($scope, ItemFactory) {
 	$scope.items = [];
 
+console.log("loaded");
+
 let getItems = () => {
 	ItemFactory.getItemList().then((itemz) =>{
 		$scope.items = itemz;
