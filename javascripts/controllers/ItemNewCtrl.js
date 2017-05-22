@@ -5,7 +5,7 @@ app.controller("ItemNewCtrl", function ($http, $location, $q, $scope, FIREBASE_C
 			$scope.newTask.isCompleted = false;
 			ItemFactory.postNewItem($scope.newTask).then((response) =>{
 				$scope.newTask = {};
-				$location.url("/items/list")
+				$location.url("/items/list");
 			}).catch((error) => {
 				console.log("Add error", error);
 			});

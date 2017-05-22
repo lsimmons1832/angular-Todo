@@ -25,7 +25,7 @@ getItems();
 		ItemFactory.editItem(item).then(() => {
 
 		}).catch((error) => {
-			console.log("inputChange error", error)
-		})
-	}
+			console.log("inputChange error", error);
+		});
+	};
 });

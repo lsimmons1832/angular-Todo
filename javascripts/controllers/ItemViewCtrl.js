@@ -1,4 +1,4 @@
-app.controller("ItemViewCtrl", function ($routeParams, $scope, ItemFactory) {
+	app.controller("ItemViewCtrl", function ($routeParams, $scope, ItemFactory) {
 	$scope.selectedItem = {};
 
 	ItemFactory.getSingleItem($routeParams.id)
@@ -7,6 +7,5 @@ app.controller("ItemViewCtrl", function ($routeParams, $scope, ItemFactory) {
 	}).catch((error) => {
 		console.log("getSingleItem error", error);
 	});
-
 
 });
