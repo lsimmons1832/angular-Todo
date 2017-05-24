@@ -22,6 +22,24 @@
             "assignedTo": "Zoe"
         }
     },
+    "tools": {
+            "tool0": {
+                "itemId": "item1",
+                "implement": "shovel"
+            },
+            "tool1": {
+                "itemId": "item1",
+                "implement": "shoes"
+            },
+            "tool2": {
+                "itemId": "item0",
+                "implement": "goat"
+            },
+            "tool2": {
+                "itemId": "item2",
+                "implement": "goat"
+            }
+        },
     "users":{
         "user0":{
             "uid": "M1kNXhIrWcPrHj6makhduVHbM4G2",
@@ -31,5 +49,6 @@
             "uid": "c3C4VdWSKVWLgGcB2905Ra3UBcH2",
             "username": "ls"
         }
+
     }
 }
