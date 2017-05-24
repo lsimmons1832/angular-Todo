@@ -1,7 +1,7 @@
 app.controller("ItemEditCtrl", function ($location, $routeParams, $scope, ItemFactory) {
 	$scope.newTask = {};
 
-		ItemFactory.getSingleItem($routeParams.id)
+	ItemFactory.getSingleItem($routeParams.id)
 	.then((results) =>{
 		$scope.newTask = results.data;
 	}).catch((error) => {

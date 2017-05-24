@@ -1,8 +1,8 @@
 app.factory("ItemFactory", function ($http, $q, FIREBASE_CONFIG) {
-		let getItemList = () =>{  //This is the function getting info from Firebase
+		let getItemList = (userId) =>{  //This is the function getting info from Firebase
 		let itemz = []; //This itemz array only exist in this function
 		return $q((resolve, reject) =>{
-			$http.get(`${FIREBASE_CONFIG.databaseURL}/items.json`)
+			$http.get(`${FIREBASE_CONFIG.databaseURL}/items.json?orderBy="uid"&equalTo="${userId}"`)
 			.then((fbItems)=>{
           var itemCollection = fbItems.data;
         	if(itemCollection !== null){
@@ -58,7 +58,8 @@ app.factory("ItemFactory", function ($http, $q, FIREBASE_CONFIG) {
 			JSON.stringify({
 				assignedTo: item.assignedTo,
 				isCompleted: item.isCompleted,
-				task: item.task
+				task: item.task,
+				uid: item.uid
 			})
 			).then((resultz) => {
 				resolve(resultz);
